@@ -100,7 +100,10 @@ editor.hoverLink = new HoverLink(editor);
 editor.hoverLink.on("open", function() {
   // alert("trying to open")
   console.log("trying to open",editor.hoverLink.link.value)
-  window.open(editor.hoverLink.link.value);
+   if(editor.hoverLink.isOpen){
+      window.open(editor.hoverLink.link.value);
+ }
+  console.log("this.link",editor.hoverLink.isOpen);
 })
 
 
